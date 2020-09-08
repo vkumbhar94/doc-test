@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Argus</title>
-    <link>https://logicmonitor.github.io/k8s-argus/categories/</link>
+    <link>https://vkumbhar94.github.io/doc-test/categories/</link>
     <description>Recent content in Categories on Argus</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://logicmonitor.github.io/k8s-argus/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vkumbhar94.github.io/doc-test/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
