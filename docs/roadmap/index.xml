@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Argus</title>
+    <link>https://logicmonitor.github.io/k8s-argus/roadmap/</link>
+    <description>Recent content on Argus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Aug 2017 16:31:31 -0700</lastBuildDate>
+    
+	<atom:link href="https://logicmonitor.github.io/k8s-argus/roadmap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Roadmap</title>
+      <link>https://logicmonitor.github.io/k8s-argus/roadmap/</link>
+      <pubDate>Sat, 12 Aug 2017 16:31:31 -0700</pubDate>
+      
+      <guid>https://logicmonitor.github.io/k8s-argus/roadmap/</guid>
+      <description>4.1.0  Ability to exclude devices from adding them to LogicMonitor monitoring  </description>
+    </item>
+    
+  </channel>
+</rss>

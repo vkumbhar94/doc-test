@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Argus</title>
+    <link>https://logicmonitor.github.io/k8s-argus/getting-started/</link>
+    <description>Recent content on Argus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Aug 2017 16:20:39 -0700</lastBuildDate>
+    
+	<atom:link href="https://logicmonitor.github.io/k8s-argus/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Getting Started</title>
+      <link>https://logicmonitor.github.io/k8s-argus/getting-started/</link>
+      <pubDate>Sat, 12 Aug 2017 16:20:39 -0700</pubDate>
+      
+      <guid>https://logicmonitor.github.io/k8s-argus/getting-started/</guid>
+      <description>The simplest way to get started with Argus is to install it using Helm version 3.
+You&amp;rsquo;ll need to add the LogicMonitor chart repository:
+$ helm repo add logicmonitor https://logicmonitor.github.com/k8s-helm-charts Now you can install the LogicMonitor Collectorset controller:
+Download configuration file from for Collectorset-controller values.yaml
+Add configuration parameters in configuration file.
+$ helm upgrade \  --install \  --debug \  --wait \  -f csc-values.yaml \  collectorset-controller logicmonitor/collectorset-controller See the configuration page for a complete list of values the Collectorset Controller helm chart supports, and their descriptions.</description>
+    </item>
+    
+  </channel>
+</rss>

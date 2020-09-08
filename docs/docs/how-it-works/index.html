@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>How It Works - Argus</title>
+    <meta name="generator" content="Hugo 0.66.0" />
+
+    
+    <meta name="description" content="Automated Kubernetes monitoring.">
+    
+    <link rel="canonical" href="https://logicmonitor.github.io/k8s-argus/docs/how-it-works/">
+    
+    <meta name="author" content="LogicMonitor, Inc.">
+    
+
+    <meta property="og:url" content="https://logicmonitor.github.io/k8s-argus/docs/how-it-works/">
+    <meta property="og:title" content="Argus">
+    <meta property="og:image" content="https://logicmonitor.github.io/images/logo.png">
+    <meta name="apple-mobile-web-app-title" content="Argus">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://logicmonitor.github.io/k8s-argus/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://logicmonitor.github.io/k8s-argus/images/favicon.ico">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('https://logicmonitor.github.io/k8s-argus/fonts/icon.eot');
+        src: url('https://logicmonitor.github.io/k8s-argus/fonts/icon.eot')
+               format('embedded-opentype'),
+             url('https://logicmonitor.github.io/k8s-argus/fonts/icon.woff')
+               format('woff'),
+             url('https://logicmonitor.github.io/k8s-argus/fonts/icon.ttf')
+               format('truetype'),
+             url('https://logicmonitor.github.io/k8s-argus/fonts/icon.svg')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://logicmonitor.github.io/k8s-argus/stylesheets/application.css">
+    <link rel="stylesheet" href="https://logicmonitor.github.io/k8s-argus/stylesheets/temporary.css">
+    <link rel="stylesheet" href="https://logicmonitor.github.io/k8s-argus/stylesheets/palettes.css">
+    <link rel="stylesheet" href="https://logicmonitor.github.io/k8s-argus/stylesheets/highlight/highlight.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Brandon%20Grotesque:400,700|Roboto&#43;Mono">
+    <style>
+      body, input {
+        font-family: 'Brandon Grotesque', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="https://logicmonitor.github.io/k8s-argus/javascripts/modernizr.js"></script>
+
+    
+
+  </head>
+  <body class="palette-primary-deep-purple palette-accent-deep-purple">
+
+
+
+	
+	
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        How It Works
+      </div>
+    </div>
+
+    
+    <div class="button button-twitter" role="button" aria-label="Twitter">
+       <a href="https://twitter.com/LogicMonitor" title="@LogicMonitor on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+    </div>
+    
+
+    
+    <div class="button button-github" role="button" aria-label="GitHub">
+      <a href="https://github.com/LogicMonitor" title="@LogicMonitor on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+    </div>
+    
+    
+        
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main class="main">
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  <a href="https://github.com/logicmonitor/k8s-argus" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="https://logicmonitor.github.io/k8s-argus/images/logo.png">
+        </div>
+      
+      <div class="name">
+        <strong>Argus <span class="version">4.0.0</span></strong>
+        
+          <br>
+          logicmonitor/k8s-argus
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="https://github.com/logicmonitor/k8s-argus/archive/master.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/logicmonitor/k8s-argus/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Argus" href="https://logicmonitor.github.io/k8s-argus/">
+	
+	Argus
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Getting started" href="https://logicmonitor.github.io/k8s-argus/getting-started/">
+	
+	Getting started
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    <span class="section">Docs</span>
+    <ul>
+      
+        
+        
+
+
+
+<a  title="Configuration" href="https://logicmonitor.github.io/k8s-argus/docs/configuration/">
+	
+	Configuration
+</a>
+
+
+
+      
+        
+        
+
+
+
+<a  title="Monitoring" href="https://logicmonitor.github.io/k8s-argus/docs/monitoring/">
+	
+	Monitoring
+</a>
+
+
+
+      
+        
+        
+
+
+
+<a  title="Device Tree Management" href="https://logicmonitor.github.io/k8s-argus/docs/device-tree-management/">
+	
+	Device Tree Management
+</a>
+
+
+
+      
+        
+        
+
+
+
+<a  title="How It Works" href="https://logicmonitor.github.io/k8s-argus/docs/how-it-works/">
+	
+	How It Works
+</a>
+
+
+
+      
+    </ul>
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Roadmap" href="https://logicmonitor.github.io/k8s-argus/roadmap/">
+	
+	Roadmap
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">The author</span>
+        
+        <ul>
+          
+          <li>
+            <a href="https://twitter.com/LogicMonitor" target="_blank" title="@LogicMonitor on Twitter">
+              @LogicMonitor on Twitter
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://github.com/LogicMonitor" target="_blank" title="@LogicMonitor on GitHub">
+              @LogicMonitor on GitHub
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:argus@logicmonitor.com" title="Email of argus@logicmonitor.com">
+              Contact via email
+            </a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>How It Works </h1>
+
+			<p>In this section we will dig into the lower level implementation of Argus to understand how it works, and provide those interested in contributing an introduction to the fundamentals of its design. An understanding of Go interfaces is recommended.</p>
+<h1 id="running-argus-in-cluster">Running Argus In-Cluster</h1>
+<p>Argus depends on communicating with the Kubernetes API Server. There are two ways to communicate with the API Server. In-cluster, and out-of-cluster. The <code>kubectl</code> CLI would be an example of out-of-cluster communication. Argus takes the former approach.</p>
+<p>Running Argus in-cluster has advantages over running it out-of-cluster. For starters, you get all of the features that come with deploying an application in Kubernetes. Additionally, you can secure Argus using a <code>ServiceAccount</code> with <code>RBAC</code> policies allowing access only to what is required for Argus to function. Technically this <em>is</em> possible out-of-cluster, but by being in-cluster, Kubernetes will take care of ensuring Argus has the <code>ServiceAccountToken</code> available at runtime. This simplifies things operationally and developmentally.</p>
+<p>Finally, we need Argus on the same overlay network as the various Kubernetes resources. Since the collector comes with Argus, and the collector is on the overlay network, it can do its job without ever having to be Kubernetes aware.</p>
+<h1 id="watching-kubernetes-events">Watching Kubernetes Events</h1>
+<p>One of the basic functions of Argus is to represent the state of a Kubernetes cluster in LogicMonitor. To do that, it must be able to keep up with rapid changes of a constantly evolving cluster. Argus acheives this by registering event handlers for each resource we are instersted in representing in LogicMonitor. To understand how Argus can automate the management of various LogicMonitor resources, we need to understand what a <code>Controller</code> is. To quote the <a href="https://kubernetes.io/docs/admin/kube-controller-manager/">documentation</a>:</p>
+<blockquote>
+<p>In Kubernetes, a controller is a control loop that watches the shared state of the cluster through the apiserver and makes changes attempting to move the current state towards the desired state. Examples of controllers that ship with Kubernetes today are the replication controller, endpoints controller, namespace controller, and serviceaccounts controller.</p>
+</blockquote>
+<p>The concept of a <code>Controller</code> is fundamental to Kubernetes and is at the core of its design. While Argus isn&rsquo;t a <code>Controller</code> in the sense that it <em>&ldquo;makes changes [to the state of the cluster] attempting to move the current state towards the desired state&rdquo;</em>, it <em>is</em> a <code>Controller</code> in the sense that it moves a LogicMonitor account&rsquo;s state to match that of a cluster&rsquo;s state. Argus abstracts this into the notion of a <code>Watcher</code> that is responsible for watching Kubernetes events for a given resource and syncing the state to LogicMonitor.</p>
+<h1 id="implementing-a-watcher">Implementing a Watcher</h1>
+<p>Now that we know about this event stream, let&rsquo;s look at what it takes to map resources in Kubernetes to objects in LogicMonitor. We start by first implenting the <code>Watcher</code> interface and then embedding a <code>Manager</code> in the concrete type implementing said interface. A <code>Watcher</code> is a simple interface that makes a concrete type compatible with the <code>NewInformer</code> function:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">a</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">Argus</span>) <span style="color:#a6e22e">Watch</span>() {
+    <span style="color:#a6e22e">getter</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">K8sClient</span>.<span style="color:#a6e22e">Core</span>().<span style="color:#a6e22e">RESTClient</span>()
+    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">w</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">Watchers</span> {
+        <span style="color:#a6e22e">watchlist</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">cache</span>.<span style="color:#a6e22e">NewListWatchFromClient</span>(<span style="color:#a6e22e">getter</span>, <span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">Resource</span>(), <span style="color:#a6e22e">v1</span>.<span style="color:#a6e22e">NamespaceAll</span>, <span style="color:#a6e22e">fields</span>.<span style="color:#a6e22e">Everything</span>())
+        <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">controller</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">cache</span>.<span style="color:#a6e22e">NewInformer</span>(
+            <span style="color:#a6e22e">watchlist</span>,
+            <span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">ObjType</span>(),
+            <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span><span style="color:#f92672">*</span><span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">cache</span>.<span style="color:#a6e22e">ResourceEventHandlerFuncs</span>{
+                <span style="color:#a6e22e">AddFunc</span>:    <span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">AddFunc</span>(),
+                <span style="color:#a6e22e">DeleteFunc</span>: <span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">DeleteFunc</span>(),
+                <span style="color:#a6e22e">UpdateFunc</span>: <span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">UpdateFunc</span>(),
+            },
+        )
+        <span style="color:#a6e22e">stop</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">struct</span>{})
+        <span style="color:#66d9ef">go</span> <span style="color:#a6e22e">controller</span>.<span style="color:#a6e22e">Run</span>(<span style="color:#a6e22e">stop</span>)
+    }
+}
+</code></pre></div><p>And we can see that the <code>Watcher</code> is defined as:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Watcher</span> <span style="color:#66d9ef">interface</span> {
+    <span style="color:#a6e22e">Resource</span>() <span style="color:#66d9ef">string</span> <span style="color:#75715e">// The Kubernetes resource that we want to watch (nodes, pods, services, etc.)
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">ObjType</span>() <span style="color:#a6e22e">runtime</span>.<span style="color:#a6e22e">Object</span> <span style="color:#75715e">// A concrete type that is used for type assertion to an interface&#39;s underlying concrete value (Pod{}, Node{}, Service{}, etc.).
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">AddFunc</span>() <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">obj</span> <span style="color:#66d9ef">interface</span>{}) <span style="color:#75715e">// A function that is responsible for handling add events for the given resource.
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">UpdateFunc</span>() <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">oldObj</span>, <span style="color:#a6e22e">newObj</span> <span style="color:#66d9ef">interface</span>{}) <span style="color:#75715e">// A function that is responsible for handling update events for the given resource.
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">DeleteFunc</span>() <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">obj</span> <span style="color:#66d9ef">interface</span>{}) <span style="color:#75715e">// A function that is responsible for handling delete events for the given resource.
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>With this simple function we can watch each Kubernetes resource we are interested in monitoring and provide custom logic for mapping it into LogicMonitor.</p>
+<h2 id="the-manager">The Manager</h2>
+<p>Now that we can watch events for a given resource, we need to implement the logic behind the add, update, and delete events. This is where we introduce the concept of a <code>Manager</code>. There are two functions of a <code>Manager</code>. First, a <code>Manager</code> must provide a way to build a LogicMonitor object given a Kubernetes resource object. Second, a <code>Manager</code> must ensure that the built object gets created in LogicMonitor. These concepts are abstracted into two interfaces, a <code>Builder</code> and a <code>Mapper</code>.</p>
+<p>Let&rsquo;s imagine that we want to map a Kubernetes <code>Foo</code> resource into LogicMonitor as a <code>Bar</code> object.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">FooWatcher</span> <span style="color:#66d9ef">struct</span> {
+    <span style="color:#a6e22e">BarManager</span>
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">BarManager</span> <span style="color:#66d9ef">interface</span> {
+    <span style="color:#a6e22e">BarBuilder</span>
+    <span style="color:#a6e22e">BarMapper</span>
+}
+</code></pre></div><p>Here we can see that the Kuberentes <code>Foo</code> resource is mapped into LogicMonitor via a <code>Watcher</code> that implements the <code>BarManager</code> interface.</p>
+
+
+			<aside class="copyright" role="note">
+				
+				&copy; 2020 Released under Mozilla Public License 2.0 &ndash;
+				
+				Documentation built with
+				<a href="https://www.gohugo.io" target="_blank">Hugo</a>
+				using the
+				<a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
+			</aside>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+      <a href="https://logicmonitor.github.io/k8s-argus/docs/device-tree-management/" title="Device Tree Management">
+        <span class="direction">
+          Previous
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              Device Tree Management
+            </div>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+
+  <div class="next">
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = 'https:\/\/logicmonitor.github.io\/k8s-argus';
+      var repo_id  = 'logicmonitor\/k8s-argus';
+    
+    </script>
+
+    <script src="https://logicmonitor.github.io/k8s-argus/javascripts/application.js"></script>
+    
+
+    <script>
+      /* Add headers to scrollspy */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers */
+        var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+        for(var i = 0; i < headers.length; i++) {
+            var a = document.createElement("a");
+            a.setAttribute("class", "headerlink");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", "Permanent link")
+            a.innerHTML = "#";
+            headers[i].appendChild(a);
+        }
+      }
+    </script>
+
+    
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

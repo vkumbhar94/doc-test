@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Argus</title>
+    <link>https://logicmonitor.github.io/k8s-argus/docs/</link>
+    <description>Recent content on Argus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Aug 2017 16:31:45 -0700</lastBuildDate>
+    
+	<atom:link href="https://logicmonitor.github.io/k8s-argus/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How It Works</title>
+      <link>https://logicmonitor.github.io/k8s-argus/docs/how-it-works/</link>
+      <pubDate>Thu, 17 Aug 2017 16:31:45 -0700</pubDate>
+      
+      <guid>https://logicmonitor.github.io/k8s-argus/docs/how-it-works/</guid>
+      <description>In this section we will dig into the lower level implementation of Argus to understand how it works, and provide those interested in contributing an introduction to the fundamentals of its design. An understanding of Go interfaces is recommended.
+Running Argus In-Cluster Argus depends on communicating with the Kubernetes API Server. There are two ways to communicate with the API Server. In-cluster, and out-of-cluster. The kubectl CLI would be an example of out-of-cluster communication.</description>
+    </item>
+    
+    <item>
+      <title>Device Tree Management</title>
+      <link>https://logicmonitor.github.io/k8s-argus/docs/device-tree-management/</link>
+      <pubDate>Wed, 16 Aug 2017 17:55:12 -0700</pubDate>
+      
+      <guid>https://logicmonitor.github.io/k8s-argus/docs/device-tree-management/</guid>
+      <description>One of the main features of Argus is its ability to represent a Kubernetes cluster in LogicMonitor, and to keep that representation up to date and accurate. Argus achieves this by managing the following.
+Device Groups Argus has an opinionated way of representing a cluster in the LogicMonitor Device Tree. It will first create a top level device group with the name of your cluster as specified in the arguments to the chart.</description>
+    </item>
+    
+    <item>
+      <title>Configuration</title>
+      <link>https://logicmonitor.github.io/k8s-argus/docs/configuration/</link>
+      <pubDate>Wed, 16 Aug 2017 17:54:55 -0700</pubDate>
+      
+      <guid>https://logicmonitor.github.io/k8s-argus/docs/configuration/</guid>
+      <description>Configuring the Collectorset Controller via the Helm Chart The Collectorset controller Helm chart supports the following values:
+Required Values:
+ accessID: The LogicMonitor API key ID. accessKey: The LogicMonitor API key. account: The LogicMonitor account name. clusterName: A unique name given to the cluster&amp;rsquo;s device group.  Optional Values:
+ enableRBAC (default: true): Enable RBAC. If your cluster does not have RBAC enabled, this value should be set to false. etcdDiscoveryToken: The public etcd discovery token used to add etcd hosts to the cluster device group.</description>
+    </item>
+    
+    <item>
+      <title>Docs</title>
+      <link>https://logicmonitor.github.io/k8s-argus/docs/</link>
+      <pubDate>Wed, 16 Aug 2017 16:29:26 -0700</pubDate>
+      
+      <guid>https://logicmonitor.github.io/k8s-argus/docs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Monitoring</title>
+      <link>https://logicmonitor.github.io/k8s-argus/docs/monitoring/</link>
+      <pubDate>Sat, 12 Aug 2017 16:20:39 -0700</pubDate>
+      
+      <guid>https://logicmonitor.github.io/k8s-argus/docs/monitoring/</guid>
+      <description>Argus adds Kubernetes resources into LogicMonitor, but the DataSources that apply to those resources are responsible for monitoring. LogicMonitor has a set of developed modules for monitoring Kubernetes, which you can import via the LM Exchange (Settings | DataSources | Add | From LogicMonitor Exchange) Filter Items with word &amp;ldquo;Kubernetes&amp;rdquo;. Add all logicmodules as per your requirements.
+If kubernetes cluster is configured with Istio then you can add &amp;ldquo;Istio kubernetes&amp;rdquo; logicmodules as well.</description>
+    </item>
+    
+  </channel>
+</rss>

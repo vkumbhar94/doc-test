@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Argus</title>
+    <link>https://logicmonitor.github.io/k8s-argus/argus/</link>
+    <description>Recent content on Argus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Aug 2017 17:16:07 -0700</lastBuildDate>
+    
+	<atom:link href="https://logicmonitor.github.io/k8s-argus/argus/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Argus</title>
+      <link>https://logicmonitor.github.io/k8s-argus/argus/</link>
+      <pubDate>Sat, 12 Aug 2017 17:16:07 -0700</pubDate>
+      
+      <guid>https://logicmonitor.github.io/k8s-argus/argus/</guid>
+      <description>Argus is a tool that helps users of LogicMonitor keep up with the highly dynamic nature of a Kubernetes cluster. Argus runs as a Pod in your cluster, and uses LogicMonitor&amp;rsquo;s API to add Nodes, Pods, and Services into monitoring. Once in monitoring, data collection starts automatically. Data is collected for Nodes, Pods, Containers, and Services via the Kubernetes API. Additionally, you can leverage LogicMonitor DataSources to monitor your applications running within the cluster.</description>
+    </item>
+    
+  </channel>
+</rss>
